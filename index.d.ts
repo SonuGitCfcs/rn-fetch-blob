@@ -318,13 +318,7 @@ export interface FS {
 
     ls(path: string): Promise<string[]>;
 
-    /**
-     * Read the file from the given path and calculate a cryptographic hash sum over its contents.
-     *
-     * @param path Path to the file
-     * @param algorithm The hash algorithm to use
-     */
-    hash(path: string, algorithm: HashAlgorithm): Promise<string>;
+   
 
     /**
      * Create file stream from file at `path`.

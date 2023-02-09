@@ -251,12 +251,6 @@ function scanFile(pairs: any): Promise {
   })
 }
 
-function hash(path: string, algorithm: string): Promise<string> {
-  if (typeof path !== 'string' || typeof algorithm !== 'string') {
-    return Promise.reject(addCode('EINVAL', new TypeError('Missing argument "path" and/or "algorithm"')))
-  }
-  return RNFetchBlob.hash(path, algorithm)
-}
 
 function cp(path: string, dest: string): Promise<boolean> {
   return new Promise((resolve, reject) => {
@@ -417,7 +411,6 @@ export default {
   pathForAppGroup,
   syncPathAppGroup,
   readFile,
-  hash,
   exists,
   createFile,
   isDir,

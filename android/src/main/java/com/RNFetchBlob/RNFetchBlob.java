@@ -279,15 +279,7 @@ public class RNFetchBlob extends ReactContextBaseJavaModule {
         });
     }
 
-    @ReactMethod
-    public void hash(final String path, final String algorithm, final Promise promise) {
-        threadPool.execute(new Runnable() {
-            @Override
-            public void run() {
-                RNFetchBlobFS.hash(path, algorithm, promise);
-            }
-        });
-    }
+
 
     /**
      * @param path Stream file path
